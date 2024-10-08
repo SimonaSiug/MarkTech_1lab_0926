@@ -1,5 +1,6 @@
 package com.example.marktech0926;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         final Button button = findViewById(R.id.btnChangeText);
+        final Button button1 = findViewById(R.id.btnChangeColor);
         tvChangeText = findViewById(R.id.tvChangeText);
         button.setOnClickListener(v -> tvChangeText.setText("Welcome to android"));
+        button1.setOnClickListener(v -> {
+            tvChangeText.setTextColor(Color.parseColor("#FF5733"));
+        });
     }
 }
